@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages by D J Rama Krishna
+## D J Rama Krishna
 
 You can use the [editor on GitHub](https://github.com/djramakrishna/cvtest.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
