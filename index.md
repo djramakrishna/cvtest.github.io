@@ -16,7 +16,11 @@ Gestures play an important role in our everyday communication and expression. Th
 
 ## Creating custom gestures using OpenCV
 
-<img src="/project-flow.png" width="720" >
+<img src="project-flow.png" width="720" >
+
+![Project Flow](project-flow.png)
+![image info-1](/project-flow.png)
+![image info-2](./project-flow.png)
 
 
 ### Markdown
