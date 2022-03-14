@@ -30,7 +30,7 @@ Syntax highlighted code block
 
 **Bold** and _Italic_ and `Code` text
 
-[LinkedIn](https://www.linkedin.com/in/ramakr1shna/) and ![Image](src)
+[https://www.linkedin.com/in/ramakr1shna](LinkedIn)  and ![Image](src)
 ```
 
 <!-- For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
