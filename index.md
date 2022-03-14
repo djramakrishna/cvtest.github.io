@@ -17,7 +17,7 @@ Gestures play an important role in our everyday communication and expression. Th
 
 <!-- <img src="project-flow.png" width="720" > -->
 
-![Project Flow](project-flow.png)
+![Project Flow](images/project-flow.png)
 
 <!-- ![image info-1](/project-flow.png)
 ![image info-2](./project-flow.png) -->
@@ -114,5 +114,5 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out. -->
 
-[LinkedIn]([https://www.linkedin.com/in/ramakr1shna)
+[LinkedIn](https://www.linkedin.com/in/ramakr1shna)
 
