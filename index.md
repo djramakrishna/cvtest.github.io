@@ -20,7 +20,9 @@ Even though the training images look like a masked image, they're  3 channel ima
 
 We've used transfer learning for feature extraction, where we've mainly froze the weights of the network in all the layers except the final fully connected layer. The last layer is replaced with a fully connected layer based on the number of classes we're using (18 in our case) and the model is trained again so that these last layer weights are updated, which significantly can reduce the training times of the heavy classification models that are being used and could help the model to generalize well as it was being trained on many features. As each networks last layer is different we need to modify the last layer based on the inputs of the last layer of that particular model. All the models used are pretrained in pytorch using the ImageNet dataset.
 
+## Model training and experimentation 
 
+We've used the AlexNet, MobileNetV2, ResNet18 as the backbones and have trained the models with various batch sizes 64, 128, 256. The learning rate was 0.001 and Stochastic Gradient Descent(SGD) was used as the optimizer. CrossEntropyLoss was the criterion used to find the loss in each step as we're basically solving a multi class classification problem. 
 
 ## Model preparation
 Along with standard architectures as mentioned above we have also deployed a custom CNN model which is optimized for quick prediction during real time implementation. 
