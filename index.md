@@ -67,10 +67,10 @@ We've also analysed the training time taken by various models, and have observed
 </p>
 
 
-## Real time hand gesture recognition
+# Real time hand gesture recognition
 We've used the best performiing model(MobileNetV2) after our experiments and used it's weights to predict the output for each frame in a video stream. Once we capture a single from the camera, we pass that frame to segment the hand region in the frame.
 
-Segmenting hand from video sequence
+## Segmenting hand from a frame
 
  - Background subtraction
 
