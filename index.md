@@ -73,8 +73,10 @@ We've used the best performiing model(MobileNetV2) after our experiments and use
 ## Segmenting hand from a frame
 
  - Background subtraction
-
-    We take an input sequence of 30 frames at the start to apply running averages and figure the background in the video sequence. After this we introduce the hand in the next frame. This frame contains the foreground and we find the absolute difference between the current frame and the background generated using running averages. This gives us the background subtracted output.
+    
+    We used running average technique so that the system looks at a scene for 30 frames and computes the running average over the current, previous frames. Once this is done, we place the hand in the designated window so that the system knows the new pixels correspond to the new object entered into the scene and is at the foreground of the scene. 
+   
+    To do this, we used the concept of running averages. We make our system to look over a particular scene for 30 frames. During this period, we compute the running average over the current frame and the previous frames. After figuring out the background, we bring in our hand and make the system understand that our hand is a new entry into the background, which means it becomes the foreground object. Now we use the hand to find the absolute difference between the background scene (changes over time) and the current frame (contains our hand) which results in a image which holds only the newly entered object in the scene, which is our hand.
 
  - Motion detection and thresholding
 
