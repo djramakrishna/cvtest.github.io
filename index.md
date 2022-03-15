@@ -29,16 +29,16 @@ We've used the AlexNet, MobileNetV2, ResNet18 as the backbones and have trained 
 As the models take huge amount of time to train, we've mainly used only "batch size" as the varying parameter in all the experiments annd analysed the training times for each experiment. The batch sizes used are 64, 128 and 256, for both training, validation loops.
 
 <p align="center">
-    Validation accuracy for AlexNet
+    i) Validation accuracy for AlexNet
 </p>
 <p align="center">
-    <img src="alexnet.png" width="400" >       
+    ii) <img src="alexnet.png" width="400" >       
 </p>
 <p align="center">
     Validation accuracy for MobileNetV2
 </p>
 <p align="center">
-    <img src="mobilenetv2.png" width="400" > 
+    iii) <img src="mobilenetv2.png" width="400" > 
  </p>   
  <p align="center">
     Validation accuracy for ResNet18
