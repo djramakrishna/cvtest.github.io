@@ -126,3 +126,8 @@ Even though the model gave good accuracies on the vaildation set, it struggles t
 ## How is our approach unique ? 
 The previous work employed a simple baseline CNN model for training and obtained the accuracies of around 98%. We have changed the backbone of the network and made use of transfer learning to fine tune the model based on our needs to obtain better accuracies in the range of 99%. We have also made a lightweight CNN model while playing around with models. 
 By employing sophisticated networks we were able to  obtain better accuracies. However deployment at real time proved challenging due to technical limitations.
+
+References : 
+1) [Github Reference used](https://www.linkedin.com/in/ramakr1shna)
+2) [Transfer learning fine tuning in pytorch](https://pytorch.org/tutorials/beginner/finetuning_torchvision_models_tutorial.html)
+3) [Transfer learning](https://cs231n.github.io/transfer-learning/)
