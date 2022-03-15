@@ -15,7 +15,7 @@ The dataset was downloaded from [Kaggle](https://www.kaggle.com/aryarishabh/hand
 
 ## Data Augmentation
 
-Even though the training images look like a masked image, they're  3 channel images and have a size of 50x50. The background of the hand is black colored and the hand in the foreground is of white in color. Each image is resized to 256 x 256 as the image size has to be compatible with the models that are trained on the PyTorch. The images are normalized using mean as [0.485, 0.456, 0.406] and standard deviation as [0.229, 0.224, 0.225] as they're the trained on ImageNet and the ImageNet has the exact same mean and standard deviation. We've tried to increase variation in the training data by using random resize crop and horizontal flip and used the center crop for the validation dataset to generate some randomness in the images that the model is being validated.
+Even though the training images look like a masked image, they're  3 channel images and have a size of `50x50`. The background of the hand is black colored and the hand in the foreground is of white in color. Each image is resized to `256 x 256` as the image size has to be compatible with the models that are trained on the PyTorch. The images are normalized using mean as ```[0.485, 0.456, 0.406]``` and standard deviation as ```[0.229, 0.224, 0.225]``` as they're the trained on ImageNet and the ImageNet has the exact same mean and standard deviation. We've tried to increase variation in the training data by using random resize crop and horizontal flip and used the center crop for the validation dataset to generate some randomness in the images that the model is being validated.
 
 # Model preparation 
 
@@ -36,7 +36,7 @@ As the models take huge amount of time to train, we've mainly used only "batch s
 </p>
 
 <p align="center">
-    <img src="alexnet.png" width="400" >       
+    <img src="alexnet.png" >       
 </p>
 
 <p align="center">
@@ -44,7 +44,7 @@ As the models take huge amount of time to train, we've mainly used only "batch s
 </p>
 
 <p align="center">
-    <img src="mobilenetv2.png" width="400" > 
+    <img src="mobilenetv2.png"> 
  </p>  
  
 <p align="center">
@@ -52,12 +52,12 @@ As the models take huge amount of time to train, we've mainly used only "batch s
 </p>
 
 <p align="center">   
-    <img src="resnet.png" width="400" >
+    <img src="resnet.png">
 </p>
 
 All the models converged with less number of epochs, as the dataset has little to less variation in the training images. But, among the models used, MobieNetV2 converged relatively with less number of epochs followed by ResNet and AlexNet. Among all the models AlexNet took more number of epochs to converge.
 
-We've achieved the best accuracy of 99.5926 % among all the experiments, using a MobileNetV2 with a batch size of 128. The same model's weights are saved in ordder to run the real time hand gesture recognition.
+We've achieved the best accuracy of `99.5926%` among all the experiments, using a MobileNetV2 with a batch size of 128. The same model's weights are saved in ordder to run the real time hand gesture recognition.
 
 <p align="center">   
     <img src="bestaccuracy.jpeg" width="400" >
@@ -74,7 +74,7 @@ We've also analysed the training time taken by various models, and have observed
 We've used the best performiing model(MobileNetV2) after our experiments and used it's weights to predict the output for each frame in a video stream. Once we capture a single from the camera, we pass that frame to segment the hand region in the frame.
 
 <p align="center">   
-    <img src="flow.jpg" width="400" >
+    <img src="flow.jpg">
 </p>
 
 ## Segmenting hand from a frame
