@@ -24,6 +24,10 @@ We've used transfer learning for feature extraction, where we've mainly froze th
 
 We've used the AlexNet, MobileNetV2, ResNet18 as the backbones and have trained the models with various batch sizes 64, 128, 256. The learning rate was 0.001 and Stochastic Gradient Descent(SGD) was used as the optimizer. CrossEntropyLoss was the criterion used to find the loss in each step as we're basically solving a multi class classification problem. 
 
+## Analysis of the results  
+
+As the models take huge amount of time to train, we've mainly used only "batch size" as the varying parameter in all the experiments annd analysed the training times for each experiment. The batch sizes used are 64, 128 and 256, for both training, validation loops.
+
 ## Model preparation
 Along with standard architectures as mentioned above we have also deployed a custom CNN model which is optimized for quick prediction during real time implementation. 
 
