@@ -87,17 +87,14 @@ We've used the best performiing model(MobileNetV2) after our experiments and use
     We find the contours in the thresholded image and obtain the contour with maximum area as the hand. 
 
 ## Prediction using model
-Once we get the segmented hand image, we pass the image to our MobileNetV2 model to predict the class it belongs to.
+Once we get the segmented hand image, we pass the image to our MobileNetV2 model to predict the class it belongs to and the class number is displayed on the window.
 
 
 ## What are some of the problems we faced?
 
-The problem we faced was that the datasets we we used were incredibly undersized and in order to use them with sophisticated large models like Inception v3, Densenet,etc the images had to be resized nearly 5 times which although proved good to go while training the implementation on the webcam was challenging. The accuracy obtained could have been better. 
+The problem we faced was that the datasets we we used were incredibly undersized and in order to use them with sophisticated large models like MobileNet v2, AlexNet,etc the images had to be resized nearly 5 times to their original size which although proved good to go while training, but when it came to the implementation on the webcam the model was not able to generalize well. The accuracy obtained could have been better in the real time scenarios.
 
-Due to the limited availability of GPU computation resources we had to run the dataset containing 21000 thousand images(although the image was undersized) and  on Google colab and kaggle notebooks and fine tuning the pre-trained models was very challenging.We spent a significant amount of time with the local CUDA crashing while training with the datasets. 
-
-It was really disappointing to realize that the amount of time spent on training the networks did not yield the desired results at runtime.
-
+Due to the limited availability of GPU computation resources we had to run the dataset containing 21000 thousand images(although the image was undersized) and  on Google colab and kaggle notebooks and fine tuning the pre-trained models was very challenging. We spent a significant amount of time with the local CUDA crashing while training with the datasets. 
 
 ## Performance analysis
 
