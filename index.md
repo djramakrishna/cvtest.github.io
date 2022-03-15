@@ -5,6 +5,16 @@ Hand gesture recognition is an important way of communicating among humans, also
 
 Our goal in this project is to build various CNN models using transfer learning and use them to recognize various real time hand gestures. The models are trained to recognize 18 classes with each class having 900 training images. 
 
+
+## Dataset
+The dataset consists of around 21000 images for 18 different gesture classes with each gesture containing around 900 training images and 300 validation images. The images in the dataset are 50 x 50 pixels, which are of really low resolution.
+
+The link for the dataset is as follows:
+https://www.kaggle.com/aryarishabh/hand-gesture-recognition-dataset
+
+<img src="images/labels.png" width="720" >
+
+
 # Project flow
 
 ## Model preparation
@@ -27,14 +37,6 @@ Segmenting hand from video sequence
 Prediction using model
 We apply the model to the segmented images which predicts a probability vector for all the 18 different classes. We then use get the index of the maximum for the output and map them to the labels we need.
 
-
-## Dataset
-The dataset consists of around 21000 images for 18 different gesture classes with each gesture containing around 900 training images and 300 testing images. The images in the dataset are 50 x 50 pixels.
-
-The link for the dataset is as follows:
-https://www.kaggle.com/aryarishabh/hand-gesture-recognition-dataset
-
-<img src="images/labels.png" width="720" >
 
 
 ## What are some of the problems we faced?
