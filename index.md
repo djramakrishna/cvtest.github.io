@@ -60,7 +60,7 @@ We've achieved the best accuracy of 99.5926 among all the experiments, using a M
     <img src="bestaccuracy.jpeg" width="400" >
 </p>
 
-We've also analysed the training time taken by various models, and have observed that the training time almost remained time from the batch size of 128 in all the models. The MobileNet model has taken the highest training time compared to other two models, where as the AlexNet took the least training times.
+We've also analysed the training time taken by various models, and have observed that the training time almost remained same from the batch size of 128 in all the models. The MobileNet model has taken the highest training time compared to other two models, where as the AlexNet took the least training times.
 
 <p align="center">   
     <img src="trainingtimes.jpeg" width="400" >
