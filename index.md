@@ -31,21 +31,27 @@ As the models take huge amount of time to train, we've mainly used only "batch s
 <p align="center">
     i) Validation accuracy for AlexNet
 </p>
+
 <p align="center">
-    ii) <img src="alexnet.png" width="400" >       
+    <img src="alexnet.png" width="400" >       
 </p>
+
 <p align="center">
-    Validation accuracy for MobileNetV2
+    ii) Validation accuracy for MobileNetV2
 </p>
+
 <p align="center">
-    iii) <img src="mobilenetv2.png" width="400" > 
- </p>   
- <p align="center">
-    Validation accuracy for ResNet18
+    <img src="mobilenetv2.png" width="400" > 
+ </p>  
+ 
+<p align="center">
+   iii) Validation accuracy for ResNet18
 </p>
+
 <p align="center">   
     <img src="resnet.png" width="400" >
 </p>
+
 ## Model preparation
 Along with standard architectures as mentioned above we have also deployed a custom CNN model which is optimized for quick prediction during real time implementation. 
 
