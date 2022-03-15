@@ -114,7 +114,9 @@ The problem we faced was that the dataset used was undersized and it has less va
 Due to the limited availability of GPU computation resources we had to run the dataset containing 21000 thousand images(although the image was undersized) and  on Google colab and kaggle notebooks and fine tuning the pre-trained models was very challenging. We spent a significant amount of time with the local CUDA crashing while training with the datasets. 
 
 
-## Next steps
+## Next steps and future work
+
+Even though the model gave good accuracies on the vaildation set, it struggles to perform well in the real world. We would like to explore more sophisticated data augmentation methods to create a dataset with sufficient diversity for effective generalization of the images on previously unseen data. Also, we would need better ways to segment our hand in the foreground. Along with that we can work in the direction of involving optical flow in the pipeline so that the model works on not only static images, but also actions generated from gestures.
 
 
 ## How is our approach unique ? 
