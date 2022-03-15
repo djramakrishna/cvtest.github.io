@@ -96,7 +96,9 @@ After segmenting the hand from the background, the input image looks like the fo
 Once we get the segmented hand image, we pass the image to our MobileNetV2 model to predict the class it belongs to and the class number is displayed on the window.
 
 
-## What are some of the problems we faced?
+# Discussion
+
+## Problems faced
 
 The problem we faced was that the dataset used was undersized and it has less variation among them. To use the dataset with sophisticated large models like MobileNet v2, AlexNet,etc the images had to be resized nearly 5 times to their original size which although proved good to go while training, but when it came to the implementation on the webcam the model was not able to generalize well. The accuracy obtained could have been better in the real time scenarios.
   
@@ -112,4 +114,7 @@ The problem we faced was that the dataset used was undersized and it has less va
 Due to the limited availability of GPU computation resources we had to run the dataset containing 21000 thousand images(although the image was undersized) and  on Google colab and kaggle notebooks and fine tuning the pre-trained models was very challenging. We spent a significant amount of time with the local CUDA crashing while training with the datasets. 
 
 
+## Next steps
 
+
+## How is our approach unique ? 
