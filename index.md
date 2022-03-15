@@ -11,7 +11,11 @@ The dataset consists of around 21000 images for 18 different gesture classes wit
 
 The dataset was downloaded from [Kaggle](https://www.kaggle.com/aryarishabh/hand-gesture-recognition-dataset)
 
+## Model preparation 
 
+# Transfer Learning
+
+We've used transfer learning for feature extraction, where we've mainly froze the weights of the network in all the layers except the final fully connected layer. The last layer is replaced with a fully connected layer based on the number of classes we're using (18 in our case) and the model is trained again so that these last layer weights are updated, which significantly can reduce the training times of the heavy classification models that are being used. As each networks last layer is different we need to modify the last layer based on the inputs of the last layer of that particular model. 
 
 
 # Project flow
