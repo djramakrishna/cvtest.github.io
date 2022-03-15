@@ -12,7 +12,7 @@ The dataset was downloaded from [Kaggle](https://www.kaggle.com/aryarishabh/hand
 
 ## Data Augmentation
 
-Even though the training images look like a masked image, they're  3 channel images and have a size of 50x50. The background of the hand is black colored and the hand in the foreground is of white in color. Each image is resized to 256 x 256 as the image size has to be compatible with the models that are trained on the PyTorch. The images are normalized using mean as [0.485, 0.456, 0.406] and standard deviation as [0.229, 0.224, 0.225] as they're the trained on ImageNet and the ImageNet has the exact same mean and standard deviation. We've tried to increase variation in the training data by using random resize crop and horizontal flip and used the 
+Even though the training images look like a masked image, they're  3 channel images and have a size of 50x50. The background of the hand is black colored and the hand in the foreground is of white in color. Each image is resized to 256 x 256 as the image size has to be compatible with the models that are trained on the PyTorch. The images are normalized using mean as [0.485, 0.456, 0.406] and standard deviation as [0.229, 0.224, 0.225] as they're the trained on ImageNet and the ImageNet has the exact same mean and standard deviation. We've tried to increase variation in the training data by using random resize crop and horizontal flip and used the center crop for the validation dataset to generate some randomness in the images that the model is being validated.
 
 # Model preparation 
 
