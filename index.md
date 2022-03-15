@@ -3,7 +3,7 @@
 ## Team Members : Jnana Rama Krishna D and Samartha R
 
 
-## Description of the problem statement
+## Problem statement
 Hand gesture recognition is an important way of communicating among humans, also between human and a machine. This has a wide range of applications, from interacting with robots, to interacting with laptops, mobile phones and helping specially abled people to express themselves. 
 
 Our goal in this project is to build various CNN models using transfer learning and use them to recognize various real time hand gestures. The models are trained to recognize 18 classes with each class having 900 training images. 
