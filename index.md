@@ -12,11 +12,11 @@ The dataset was downloaded from [Kaggle](https://www.kaggle.com/aryarishabh/hand
 
 ## Data Augmentation
 
-Even though the training images look like a masked image, they're  3 channel images and have a size of 50x50. The background of the hand is black colored and the hand in the foreground is of white in color. Each image is resized to 256 x 256 as the image size has to be compatible with the models that are trained on the PyTorch. The images are normalized using mean as [0.485, 0.456, 0.406] and standard deviation as [0.229, 0.224, 0.225] as they're the trained on ImageNet and the ImageNet has the exact same mean and standard deviation. 
+Even though the training images look like a masked image, they're  3 channel images and have a size of 50x50. The background of the hand is black colored and the hand in the foreground is of white in color. Each image is resized to 256 x 256 as the image size has to be compatible with the models that are trained on the PyTorch. The images are normalized using mean as [0.485, 0.456, 0.406] and standard deviation as [0.229, 0.224, 0.225] as they're the trained on ImageNet and the ImageNet has the exact same mean and standard deviation. We've tried to increase variation in the training data by using random resize crop and horizontal flip and used the 
 
-## Model preparation 
+# Model preparation 
 
-# Transfer Learning
+## Transfer Learning
 
 We've used transfer learning for feature extraction, where we've mainly froze the weights of the network in all the layers except the final fully connected layer. The last layer is replaced with a fully connected layer based on the number of classes we're using (18 in our case) and the model is trained again so that these last layer weights are updated, which significantly can reduce the training times of the heavy classification models that are being used and could help the model to generalize well as it was being trained on many features. As each networks last layer is different we need to modify the last layer based on the inputs of the last layer of that particular model. All the models used are pretrained in pytorch using the ImageNet dataset.
 
