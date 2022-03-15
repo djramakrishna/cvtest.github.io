@@ -5,7 +5,6 @@ Hand gesture recognition is an important way of communicating among humans, also
 
 Our goal in this project is to build various CNN models using transfer learning and use them to recognize various real time hand gestures. The models are trained to recognize 18 classes with each class having 900 training images. 
 
-We have trained the dataset on various standard architectures like ResNet, Alexnet and MovileNetV2 and have achieved validation accuracies above 98% for all the models.
 
 ## Process flow
 
@@ -50,6 +49,9 @@ It was really disappointing to realize that the amount of time spent on training
 
 
 ## Performance analysis
+
+
+We have trained the dataset on various standard architectures like ResNet, Alexnet and MovileNetV2 and have achieved validation accuracies above 98% for all the models.
 
 We have trained the above-mentioned models on the vast dataset and obtained good accuracies for each of them as depicted by the plots.
 
