@@ -5,9 +5,9 @@ Hand gesture recognition is an important way of communicating among humans, also
 
 Our goal in this project is to build various CNN models using transfer learning and use them to recognize various real time hand gestures. The models are trained to recognize 18 classes with each class having 900 training images. 
 
-## Project flow
+# Project flow
 
-# Model preparation
+## Model preparation
 Along with standard architectures as mentioned above we have also deployed a custom CNN model which is optimized for quick prediction during real time implementation. 
 
 Segmenting hand from video sequence
