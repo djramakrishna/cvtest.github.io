@@ -74,7 +74,7 @@ We've also analysed the training time taken by various models, and have observed
 We've used the best performiing model(MobileNetV2) after our experiments and used it's weights to predict the output for each frame in a video stream. Once we capture a single from the camera, we pass that frame to segment the hand region in the frame.
 
 <p align="center">   
-    <img src="project-flow.png" width="400" >
+    <img src="flow.jpeg" width="400" >
 </p>
 
 ## Segmenting hand from a frame
