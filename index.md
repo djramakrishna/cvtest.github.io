@@ -18,7 +18,7 @@ Even though the training images look like a masked image, they're  3 channel ima
 
 ## Transfer Learning
 
-We've used transfer learning for feature extraction, where we've mainly froze the weights of the network in all the layers except the final fully connected layer. The last layer is replaced with a fully connected layer based on the number of classes we're using (18 in our case) and the model is trained again so that these last layer weights are updated, which significantly can reduce the training times of the heavy classification models that are being used and could help the model to generalize well as it was being trained on many features. As each networks last layer is different we need to modify the last layer based on the inputs of the last layer of that particular model. All the models used are pretrained in pytorch using the ImageNet dataset.
+We've used transfer learning for feature extraction, where we've mainly froze the weights of the network in all the layers except the final fully connected layer. The last layer is replaced with a fully connected layer based on the number of classes we're using (18 in our case) and the model is trained again so that these last layer weights are updated, which significantly can reduce the training times of the heavy classification models that are being used and could help the model to generalize well as it was being trained on many features. As each networks last layer is different we need to modify the last layer based on the inputs of the last layer of that particular model. All the models used are pretrained in pytorch using the ImageNet dataset. The model weights are later saved on to run a realtime handgesture analysis.
 
 ## Model training and experimentation 
 
