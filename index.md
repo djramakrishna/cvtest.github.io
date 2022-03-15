@@ -3,6 +3,8 @@
 ## Team Members
 Jnana Rama Krishna D and Samartha Ramkumar
 
+[Video presentation](https://drive.google.com/file/d/1hJuggP78K1OOjdf7JcgZBRIgGPBR321C/view?ts=62302ea3)
+
 ## Problem statement
 Hand gesture recognition is an important way of communicating among humans, also between human and a machine. This has a wide range of applications, from interacting with robots, to interacting with laptops, mobile phones and helping specially abled people to express themselves. 
 
