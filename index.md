@@ -88,7 +88,7 @@ We've used the best performiing model(MobileNetV2) after our experiments and use
 
 After segmenting the hand from the background, the input image looks like the following : 
 <p align="center">   
-    <img src="maskedinput.jpeg" width="400" >
+    <img src="masked_input.jpeg" width="400" >
 </p>
 
 
