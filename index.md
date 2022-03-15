@@ -86,9 +86,8 @@ We've used the best performiing model(MobileNetV2) after our experiments and use
 
     We find the contours in the thresholded image and obtain the contour with maximum area as the hand. 
 
-Prediction using model
-We apply the model to the segmented images which predicts a probability vector for all the 18 different classes. We then use get the index of the maximum for the output and map them to the labels we need.
-
+# Prediction using model
+Once we get the segmented hand image, we pass the image to our MobileNetV2 model to predict the class it belongs to.
 
 
 ## What are some of the problems we faced?
