@@ -7,7 +7,7 @@ Our goal in this project is to build various CNN models using transfer learning 
 
 
 ## Dataset
-The dataset consists of around 21000 images for 18 different gesture classes with each gesture containing around 900 training images and 300 validation images. The resolution of the images in the dataset are 50 x 50 pixels, which is really low.
+The dataset was downloaded from [Kaggle](https://www.kaggle.com/aryarishabh/hand-gesture-recognition-dataset) and it consists of around 21000 images for 18 different gesture classes with each gesture containing around 900 training images and 300 validation images. The resolution of the images in the dataset are 50 x 50 pixels, which is really low.
 
 The dataset was downloaded from [Kaggle](https://www.kaggle.com/aryarishabh/hand-gesture-recognition-dataset)
 
