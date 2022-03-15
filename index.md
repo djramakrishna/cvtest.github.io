@@ -1,118 +1,81 @@
-# CSE455
+# Hand Gesture Recognition
 
-<!-- You can use the [editor on GitHub](https://github.com/djramakrishna/cvtest.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
- -->
-<!-- Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files. -->
+## Description
+Hand gesture recognition is an important way of communicating among humans and also between human and a machine. This has a wide range of applications, from interacting with robots, to interacting with laptops, mobile phones and helping specially abled people to express themselves. 
 
-## Gesture-controlled-opencv-calculator
+Our goal in this project is to build and apply various models which recognize hand gestures and use it to make an onscreen real time calculator. The model is trained to recognize 18 classes with each class having 900 training images. 
 
-### Introduction
-Gestures play an important role in our everyday communication and expression. Thus using them to communicate with tech devices needs very little intellectual data processing from our side. That means we can control different things such as vending machines almost without thinking, just by using our fingers and hands. Gesture recognition is a technology aimed at providing live-time data to a computer to execute commands the user wants. People do not need to type anything with keys or tap on a touch screen to perform a specific action. The device's motion sensor can perceive and interpret the person's movements as the primary source of data input The scope of the project is to construct a synchronous gesture classifying system that can recognize gestures in lighting circumstances spontaneously. To achieve this goal, a synchronous gesture which based on real time is generated to recognize gestures. An intention of this project is to generate a complete system which can identify, spot and explain the hand motioning through computer sight. This structure will work as one of the envisioning of computer sight and AI with user interaction. It create function to identify hand motion based on various arguments. The topmost preference of the structure is to make it easy to use, simple to handle and user amiable without producing any specific hardware. All functions will appear on same Computer or workstation. Only some specific hardware will be used to digitalize the picture.
+We have trained the dataset on various standard architectures like VGG, Inception, Resnet, Squeezenet, Alexnet and Densenet and obtained good accuracies above 98% for all the models.
 
+## Process flow
 
-## Project Flow
-
-
-## Creating custom gestures using OpenCV
-
-<!-- <img src="project-flow.png" width="720" > -->
-
-![Project Flow](project-flow.png)
-
-<!-- ![image info-1](/project-flow.png)
-![image info-2](./project-flow.png) -->
-
-
-## Creating custom gestures using OpenCV
-For model training, we need training set. Here, we are manually creating gestures for model training purposes. Explo_gestures.py is the python file which is being used to make gestures. Following are the samples of manually created gesture images.
-
-<img src="5.png" width="100" >                  <img src="6.png" width="100" >                  <img src="7.png" width="100" >
-
-Also, you can use my dataset of 20 different gestures from [here](https://www.kaggle.com/aryarishabh/hand-gesture-recognition-dataset)
-
-## Model Making for gesture recognition
-We used deep learning techniques for model building. For model training, we have 18 different classes having 800+ images for each class and we have also used data augmentation for creating batches of images. The Sequential model architecture consists of 4 convolution layers with 32, 64, 64, 128 filters respectively. Two Maxpooling layers are used, each after two convolution layers for reducing the dimension of the images followed by dropout layers. Then, a flatten layer followed by 3 Dense layers of 64, 32 ,18 units respectively. The activation function used for the last dense layer having 18 units is softmax function, which gives us the probability of those 18 classes. 
-
-<img src="explo_architecture.png" width="720" >
-
-## Model performance analysis
-Model is well trained since we have a lot of training data and also have used data augmentation techniques to make our model robust. This trained model has achieved an accuracy of 98.89% on training data and 98.13% on testing data in only 10 epochs. This model can handle variations in the positions of hand as well. The model takes an image of preprocessed hand gesture of shape (32,32) as the input and predicts the corresponding label for the gesture.For full code, please refer to the explo.ipynb file.
-
-<img src="acc_score.png" width="450" >       <img src="loss_score.png" width="450" >
-
-The labels for different gestures are as follows-
-
-<img src="labels.png" width="720" >
-
-## Find and segment the hand from the video sequence
-We are going to recognize the gestures from a video sequence. To recognize these gestures from a live video sequence, we first need to take out the hand region alone removing the unwanted portions in the video sequence. Hence, for segmenting the hand region, there are three major steps:
-- Background Subtraction
-- Motion detection and thresholding
-- Contour Extraction 
-
-## Background subtraction
-
-To do this, we used the concept of running averages. We make our system to look over a particular scene for 30 frames. During this period, we compute the running average over the current frame and the previous frames. After figuring out the background, we bring in our hand and make the system understand that our hand is a new entry into the background, which means it becomes the foreground object.
+ Model preparation
  
-After figuring out the background model using running averages, we use the current frame which holds the foreground object (hand in our case) in addition to the background. We calculate the absolute difference between the background model (updated over time) and the current frame (which has our hand) to obtain a difference image that holds the newly added foreground object (which is our hand). 
+Along with standard architectures as mentioned above we have also deployed a custom CNN model which is optimized for quick prediction during real time implementation. 
 
-## Motion detection and thresholding
-To detect the hand region from this difference image, we need to threshold the difference image, so that only our hand region becomes visible and all the other unwanted regions are painted as black.
+Segmenting hand from video sequence
 
-## Contour Extraction
-After thresholding the difference image, we find contours in the resulting image. The contour with the largest area is assumed to be our hand.
-The results after applying the above steps - 
-<img src="preprocessed.png" width="720" >
+ - Background subtraction
 
+    We take an input sequence of 30 frames at the start to apply running averages and figure the background in the video sequence. After this we introduce the hand in the next frame. This frame contains the foreground and we find the absolute difference between the current frame and the background generated using running averages. This gives us the background subtracted output.
 
+ - Motion detection and thresholding
 
-## Gesture recognition and model prediction
-Now, the image of the segmented hand is feeded to the model as the input. The output of the model will be a 18 dimensional vector which represents the probability for 18 classes i.e., whether the input image belongs to this class or that. Using np.argmax function, we get the index of highest probability score predicted by the model. Using the list label, we get the final results.Here are some examples - 
+    We use a threshold parameter on the difference image to filter out only the hand and set all other objects into the background
 
-<img src="1.png" width="300" >         <img src="2.png" width="300" >         <img src="3.png" width="300" >
+ - Contour extraction
 
-## Feeding set of gestures as numbers and operators for performing calculator operations
-Using gestures we first input First Number, Operator and the Second Number. For inputing the digits of the numbers and the operators, we kept a window of 2 secs for each.
-Once the numbers and operators are inputed, the result will be printed on the screen.
+    We find the contours in the thresholded image and obtain the contour with maximum area as the hand. 
 
-<img src="input.gif" width="720" >
+Prediction using model
+We apply the model to the segmented images which predicts a probability vector for all the 18 different classes. We then use get the index of the maximum for the output and map them to the labels we need.
 
 
-After feeding the first number, operator and the second number. The result will be printed on the screen like – 
+## Dataset
+The dataset consists of around 21000 images for 18 different gesture classes with each gesture containing around 900 training images and 300 testing images. The images in the dataset are 50 x 50 pixels.
 
-<img src="4.png" width="720" >
+The link for the dataset is as follows:
+https://www.kaggle.com/aryarishabh/hand-gesture-recognition-dataset
 
-<!-- ### Markdown
+<img src="images/labels.png" width="720" >
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+## What are some of the problems we faced?
 
-# Header 1
-## Header 2
-### Header 3
+The problem we faced was that the datasets we we used were incredibly undersized and in order to use them with sophisticated large models like Inception v3, Densenet,etc the images had to be resized nearly 5 times which although proved good to go while training the implementation on the webcam was challenging. The accuracy obtained could have been better. 
 
-- Bulleted
-- List
+Due to the limited availability of GPU computation resources we had to run the dataset containing 21000 thousand images(although the image was undersized) and  on Google colab and kaggle notebooks and fine tuning the pre-trained models was very challenging.We spent a significant amount of time with the local CUDA crashing while training with the datasets. 
 
-1. Numbered
-2. List
+It was really disappointing to realize that the amount of time spent on training the networks did not yield the desired results at runtime.
 
-**Bold** and _Italic_ and `Code` text
 
-  and ![Image](src)
-``` -->
+## Performance analysis
 
-<!-- For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+We have trained the above-mentioned models on the vast dataset and obtained good accuracies for each of them as depicted by the plots.
 
-### Jekyll Themes
+Overall we were able to obtain excellent accuracies for each of the models on the vast datasets we deployed as depicted by the plots. For each model we have trained on batch sizes of  64,128 and 256. 
+We suspect that the reason for challenging results at runtime is attributed to the transformations necessary to feed the network into the large models. Although a huge dataset, the lack of diversity between the samples caused the poor generalization of the network.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/djramakrishna/cvtest.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+The model performance are as given below:
 
-### Support or Contact
+A baseline custom CNN architecture
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out. -->
 
-[LinkedIn](https://www.linkedin.com/in/ramakr1shna)
+- Inception     
 
+<img src="images/inception.png" width="200" >   <img src="images/Squeezenet.png" width="200" >      <img src="images/densenet.png" width="200" > <img src="images/alexnet.png" width="200" >
+
+- Resnet
+<img src="images/resnet.png" width="200" >
+
+-  VGG
+<img src="images/vgg.png" width="200" >
+
+- Squeezenet
+<img src="images/Squeezenet.png" width="200" >
+
+- Alexnet
+<img src="images/alexnet.png" width="200" >
+
+- Densenet
+<img src="images/densenet.png" width="200" >
