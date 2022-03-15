@@ -1,4 +1,4 @@
-# Hand Gesture Recognition
+# Realtime Hand Gesture Recognition
 
 ## Team Members
 Jnana Rama Krishna D and Samartha Ramkumar
