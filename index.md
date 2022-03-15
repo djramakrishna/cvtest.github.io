@@ -100,16 +100,12 @@ Once we get the segmented hand image, we pass the image to our MobileNetV2 model
 
 The problem we faced was that the dataset used was undersized and it has less variation among them. To use the dataset with sophisticated large models like MobileNet v2, AlexNet,etc the images had to be resized nearly 5 times to their original size which although proved good to go while training, but when it came to the implementation on the webcam the model was not able to generalize well. The accuracy obtained could have been better in the real time scenarios.
   
-  <p align="center"> 
-  
-<img src="output1.jpeg" width="400" >     <img src="output2.jpeg" width="400" >
-    
-    </p>
+<p align="center"> 
+  <img src="output1.jpeg" width="400" >     <img src="output2.jpeg" width="400" >
+</p>
     
 <p align="center">
-
-<img src="output3.jpeg" width="400" >       <img src="output4.jpeg" width="400" >
-
+    <img src="output3.jpeg" width="400" >       <img src="output4.jpeg" width="400" >
 </p>
  
 
