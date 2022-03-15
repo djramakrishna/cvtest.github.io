@@ -67,7 +67,7 @@ We've also analysed the training time taken by various models, and have observed
 </p>
 
 
-## Model preparation
+## Real time hand gesture recognition
 Along with standard architectures as mentioned above we have also deployed a custom CNN model which is optimized for quick prediction during real time implementation. 
 
 Segmenting hand from video sequence
