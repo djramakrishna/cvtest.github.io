@@ -61,6 +61,13 @@ We've achieved the best accuracy
     <img src="bestaccuracy.jpeg" width="400" >
 </p>
 
+
+
+<p align="center">   
+    <img src="trainingtimes.jpeg" width="400" >
+</p>
+
+
 ## Model preparation
 Along with standard architectures as mentioned above we have also deployed a custom CNN model which is optimized for quick prediction during real time implementation. 
 
