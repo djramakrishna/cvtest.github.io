@@ -1,9 +1,9 @@
 # Hand Gesture Recognition
 
 ## Description
-Hand gesture recognition is an important way of communicating among humans and also between human and a machine. This has a wide range of applications, from interacting with robots, to interacting with laptops, mobile phones and helping specially abled people to express themselves. 
+Hand gesture recognition is an important way of communicating among humans, also between human and a machine. This has a wide range of applications, from interacting with robots, to interacting with laptops, mobile phones and helping specially abled people to express themselves. 
 
-Our goal in this project is to build and apply various models which recognize hand gestures and use it to make an onscreen real time calculator. The model is trained to recognize 18 classes with each class having 900 training images. 
+Our goal in this project is to build various CNN models using transfer learning and use them to recognize various real time hand gestures. The model is trained to recognize 18 classes with each class having 900 training images. 
 
 We have trained the dataset on various standard architectures like VGG, Inception, Resnet, Squeezenet, Alexnet and Densenet and obtained good accuracies above 98% for all the models.
 
