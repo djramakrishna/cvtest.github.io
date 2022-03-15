@@ -54,7 +54,7 @@ As the models take huge amount of time to train, we've mainly used only "batch s
 
 All the models converged with less number of epochs, as the dataset has little to less variation in the training images. But, among the models used, MobieNetV2 converged relatively with less number of epochs followed by ResNet and AlexNet. Among all the models AlexNet took more number of epochs to converge.
 
-We've achieved the best accuracy of 99.5926 among all the experiments, using a MobileNetV2 with a batch size of 128. The same model's weights are saved in ordder to run the real time hand gesture recognition.
+We've achieved the best accuracy of 99.5926 % among all the experiments, using a MobileNetV2 with a batch size of 128. The same model's weights are saved in ordder to run the real time hand gesture recognition.
 
 <p align="center">   
     <img src="bestaccuracy.jpeg" width="400" >
