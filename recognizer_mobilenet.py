@@ -55,9 +55,7 @@ def segment(image, threshold=30):
 	else:
 		segmented = max(cnts, key=cv2.contourArea)
 		return (thresholded, segmented)
-
 	
-result_dict = {10:'+', 11:'-', 12:'*', 13:'/', 14:'confirm', 15:'**', 16:'%', 17:'Clear', 18:'Clear', 19:'Clear'}
 
 tfms = transforms.Compose([
 		#transforms.Resize(256),	
