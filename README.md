@@ -46,7 +46,7 @@ As the models take huge amount of time to train, we've mainly used only "batch s
 </p>
 
 <p align="center">
-    <img src="mobilenetv2.png"> 
+    <img src="./assets/mobilenetv2.png"> 
  </p>  
  
 <p align="center">
@@ -54,7 +54,7 @@ As the models take huge amount of time to train, we've mainly used only "batch s
 </p>
 
 <p align="center">   
-    <img src="resnet.png">
+    <img src="./assets/resnet.png">
 </p>
 
 All the models converged with less number of epochs, as the dataset has little to less variation in the training images. But, among the models used, MobieNetV2 converged relatively with less number of epochs followed by ResNet and AlexNet. Among all the models AlexNet took more number of epochs to converge.
@@ -62,13 +62,13 @@ All the models converged with less number of epochs, as the dataset has little t
 We've achieved the best accuracy of `99.5926%` among all the experiments, using a MobileNetV2 with a batch size of 128. The same model's weights are saved in ordder to run the real time hand gesture recognition.
 
 <p align="center">   
-    <img src="bestaccuracy.jpeg" width="400" >
+    <img src="./assets/bestaccuracy.jpeg" width="400" >
 </p>
 
 We've also analysed the training time taken by various models, and have observed that the training time almost remained same from the batch size of 128 in all the models. The MobileNet model has taken the highest training time compared to other two models, where as the AlexNet took the least training times.
 
 <p align="center">   
-    <img src="trainingtimes.jpeg" width="400" >
+    <img src="./assets/trainingtimes.jpeg" width="400" >
 </p>
 
 
@@ -76,7 +76,7 @@ We've also analysed the training time taken by various models, and have observed
 We've used the best performiing model(MobileNetV2) after our experiments and used it's weights to predict the output for each frame in a video stream. Once we capture a single from the camera, we pass that frame to segment the hand region in the frame.
 
 <p align="center">   
-    <img src="flow.jpg">
+    <img src="./assets/flow.jpg">
 </p>
 
 ## Segmenting hand from a frame
@@ -97,7 +97,7 @@ We've used the best performiing model(MobileNetV2) after our experiments and use
 
 After segmenting the hand from the background, the input image looks like the following : 
 <p align="center">   
-    <img src="masked_input.jpeg" width="400" >
+    <img src="./assets/masked_input.jpeg" width="400" >
 </p>
 
 
@@ -112,11 +112,11 @@ Once we get the segmented hand image, we pass the image to our MobileNetV2 model
 The problem we faced was that the dataset used was undersized and it has less variation among them. To use the dataset with sophisticated large models like MobileNet v2, AlexNet,etc the images had to be resized nearly 5 times to their original size which although proved good to go while training, but when it came to the implementation on the webcam the model was not able to generalize well. The accuracy obtained could have been better in the real time scenarios.
   
 <p align="center"> 
-  <img src="output1.jpeg" width="400" >     <img src="output2.jpeg" width="400" >
+  <img src="./assets/output1.jpeg" width="400" >     <img src="./assets/output2.jpeg" width="400" >
 </p>
     
 <p align="center">
-    <img src="output3.jpeg" width="400" >       <img src="output4.jpeg" width="400" >
+    <img src="./assets/output3.jpeg" width="400" >       <img src="./assets/output4.jpeg" width="400" >
 </p>
  
 
