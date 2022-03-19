@@ -67,31 +67,15 @@ def count(thresholded, segmented):
 	img = cv2.resize(thresholded,(256,256))
 	img = np.stack((img,)*3, axis=-1)
 	img = img.astype(np.float32)
-
-
-	#img = torch.from_numpy(img)
-	#img = img.permute(0, 3, 1, 2)
-	#img = img.permute(2, 1, 0)
-	#print(img.shape)
 	img = tfms(img)
 	img = img.permute(2, 1, 0)
-	
-	#print(img.shape)
 	img = torch.unsqueeze(img, 0)
-	#print(img.shape)
 	img = img.permute(0, 3, 1, 2)
-	#print("SHAPE AFTER STACKING AND UNSQ	UEEZING", img.shape)
 	img = img.cuda()
 	outputs = model(img)
-	#print("PREDICTIONSSSSSSSSS  ", outputs)
-	#preds = torch.argmax(prediction)
 	_, preds = torch.max(outputs, 1)
 
 	predicted_class = preds.item()
-	#print("PREDS ARE ", preds)
-	#percentage = torch.nn.functional.softmax(outputs, dim=1)[0] * 100
-	#print("PERCENTAGE IS :", percentage)
-	
 	return predicted_class
 
 
