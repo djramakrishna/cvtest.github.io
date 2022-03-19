@@ -106,7 +106,6 @@ def segment(image, threshold=30):
 		return (thresholded, segmented)
 
 	
-result_dict = {10:'+', 11:'-', 12:'*', 13:'/', 14:'confirm', 15:'**', 16:'%', 17:'Clear', 18:'Clear', 19:'Clear'}
 
 tfms = transforms.Compose([
 		#transforms.Resize(256),	
@@ -118,31 +117,15 @@ def count(thresholded, segmented):
 	img = cv2.resize(thresholded,(256,256))
 	img = np.stack((img,)*3, axis=-1)
 	img = img.astype(np.float32)
-
-
-	#img = torch.from_numpy(img)
-	#img = img.permute(0, 3, 1, 2)
-	#img = img.permute(2, 1, 0)
-	#print(img.shape)
 	img = tfms(img)
 	img = img.permute(2, 1, 0)
 	
-	#print(img.shape)
 	img = torch.unsqueeze(img, 0)
-	#print(img.shape)
 	img = img.permute(0, 3, 1, 2)
-	#print("SHAPE AFTER STACKING AND UNSQ	UEEZING", img.shape)
 	img = img.cuda()
 	outputs = model(img)
-	#print("PREDICTIONSSSSSSSSS  ", outputs)
-	#preds = torch.argmax(prediction)
 	_, preds = torch.max(outputs, 1)
-
 	predicted_class = preds.item()
-	#print("PREDS ARE ", preds)
-	#percentage = torch.nn.functional.softmax(outputs, dim=1)[0] * 100
-	#print("PERCENTAGE IS :", percentage)
-	
 	return predicted_class
 
 
