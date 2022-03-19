@@ -38,7 +38,7 @@ As the models take huge amount of time to train, we've mainly used only "batch s
 </p>
 
 <p align="center">
-    <img src="alexnet.png" >       
+    <img src="./assets/alexnet.png" >       
 </p>
 
 <p align="center">
