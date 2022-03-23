@@ -133,7 +133,5 @@ The previous work employed a simple baseline CNN model for training and obtained
 By employing sophisticated networks we were able to  obtain better accuracies. However deployment at real time proved challenging due to technical limitations.
 
 References : 
-1) [Presentation for the project](https://docs.google.com/presentation/d/13LD8DBz0BHih0IjaJgoh5blaWbaGZDlG/edit#slide=id.p1)
-2) [Github Reference used](https://github.com/rishabh-arya/Gesture-controlled-opencv-calculator)
-3) [Transfer learning fine tuning in pytorch](https://pytorch.org/tutorials/beginner/finetuning_torchvision_models_tutorial.html)
-4) [Transfer learning](https://cs231n.github.io/transfer-learning/)
+1) [Transfer learning fine tuning in pytorch](https://pytorch.org/tutorials/beginner/finetuning_torchvision_models_tutorial.html)
+2) [Transfer learning](https://cs231n.github.io/transfer-learning/)
